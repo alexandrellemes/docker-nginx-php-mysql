@@ -1,6 +1,7 @@
 # Global
 .*.swp
 .DS_Store
+vendor/
 
 # Application
 web/app/composer.json
