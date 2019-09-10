@@ -1,5 +1,6 @@
 version: '3'
 services:
+
     web:
         image: nginx:latest
         volumes:
@@ -17,6 +18,7 @@ services:
         depends_on:
             - php
             - mysqldb
+
     php:
         image: php:fpm
         restart: always
@@ -30,6 +32,7 @@ services:
         volumes:
             - "./web/app:/app"
         command: install
+
     myadmin:
         image: phpmyadmin/phpmyadmin
         container_name: phpmyadmin
@@ -41,6 +44,7 @@ services:
         restart: always
         depends_on:
             - mysqldb
+
     mysqldb:
         image: mysql
         container_name: ${MYSQL_HOST}
@@ -56,3 +60,10 @@ services:
             - "8989:3306"
         volumes:
             - "./data/db/mysql:/var/lib/mysql"
+
+volumes:
+    web_data:
+    php_data:
+    composer_data:
+    myadmin_data:
+    mysqldb_data:
