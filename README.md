@@ -93,7 +93,7 @@ This project use the following ports :
 To install [Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git), download it and install following the instructions : 
 
 ```sh
-git clone https://github.com/nanoninja/docker-nginx-php-mysql.git
+git clone https://github.com/alexandrellemes/docker-nginx-php-mysql.git
 ```
 
 Go to the project directory : 
@@ -344,8 +344,3 @@ source .env && sudo docker exec -i $(sudo docker-compose ps -q mysqldb) mysql -u
 
 ---
 
-## Help us !
-
-Any thought, feedback or (hopefully not!)
-
-Developed by [@letvinz](https://twitter.com/letvinz)
